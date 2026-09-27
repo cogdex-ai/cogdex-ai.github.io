@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: 1200px; height: 627px; overflow: hidden; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+        color: #e5e2e1;
+        background:
+          radial-gradient(700px 420px at 92% -10%, rgba(78, 222, 163, 0.18), transparent 60%),
+          #131313;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 48px;
+        align-items: center;
+        padding: 64px 72px;
+        -webkit-font-smoothing: antialiased;
+      }
+      .brand { display: flex; align-items: center; gap: 14px; font-size: 30px; font-weight: 700; }
+      .mark {
+        width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center;
+        background: #0e0e0e; border: 1px solid #2f2f2f; color: #4edea3; font-weight: 800; font-size: 28px;
+      }
+      h1 { margin: 36px 0 22px; font-size: 58px; line-height: 1.08; letter-spacing: -0.025em; font-weight: 750; }
+      .accent { color: #4edea3; }
+      p { margin: 0; color: #a9acad; font-size: 25px; line-height: 1.4; }
+      .pill {
+        display: inline-flex; align-items: center; gap: 10px; margin-top: 30px; padding: 10px 18px;
+        border: 1px solid #2f2f2f; border-radius: 999px; font-size: 20px; color: #e5e2e1;
+      }
+      .dot { width: 9px; height: 9px; border-radius: 50%; background: #4edea3; box-shadow: 0 0 12px #4edea3; }
+      .win {
+        border: 1px solid #2f2f2f; border-radius: 20px; background: #1c1b1b; overflow: hidden;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+      }
+      .bar {
+        display: flex; align-items: center; gap: 8px; padding: 14px 18px;
+        background: #201f1f; border-bottom: 1px solid #2f2f2f; font-size: 16px; font-weight: 600;
+      }
+      .bar i { width: 12px; height: 12px; border-radius: 50%; background: #3a3939; }
+      .bar b { margin-left: 8px; }
+      .bar em { margin-left: auto; font-style: normal; font-size: 14px; color: #4edea3; display: flex; align-items: center; gap: 7px; }
+      .body { display: flex; flex-direction: column; gap: 16px; padding: 24px; }
+      .msg { max-width: 90%; padding: 14px 17px; border-radius: 15px; font-size: 19px; line-height: 1.45; }
+      .user { align-self: flex-end; background: #2a2a2a; border-bottom-right-radius: 4px; }
+      .bot { align-self: flex-start; background: #0e0e0e; border: 1px solid #2f2f2f; border-bottom-left-radius: 4px; }
+      .src { display: block; margin-top: 8px; color: #4edea3; font-size: 15px; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="brand"><span class="mark">C</span>Cogdex</div>
+      <h1>Your family's records.<br /><span class="accent">Never uploaded.</span></h1>
+      <p>A private assistant for passports, insurance, medical and tax records. Runs entirely on your Mac.</p>
+      <span class="pill"><span class="dot"></span>Private beta for Mac</span>
+    </div>
+    <div class="win">
+      <div class="bar"><i></i><i></i><i></i><b>Cogdex</b><em><span class="dot"></span>On this Mac</em></div>
+      <div class="body">
+        <div class="msg user">When does Maya's passport expire?</div>
+        <div class="msg bot">
+          Maya's passport expires on <strong>March 14, 2027</strong>, about 5 months from now.
+          <span class="src">↳ Passport_Maya.pdf</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

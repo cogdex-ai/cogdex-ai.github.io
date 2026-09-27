@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cogdex: your family's records, answered privately on your Mac</title>
+    <meta
+      name="description"
+      content="Ask about passports, insurance, medical and tax records in plain English. Cogdex answers from your own files and runs entirely on your Mac. Nothing is uploaded."
+    />
+    <link rel="canonical" href="https://cogdex-ai.github.io/" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#131313" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Cogdex" />
+    <meta property="og:url" content="https://cogdex-ai.github.io/" />
+    <meta property="og:title" content="Cogdex: your family's records, answered privately" />
+    <meta
+      property="og:description"
+      content="A private assistant for passports, insurance, medical and tax records. Runs entirely on your Mac. Nothing is uploaded. Join the beta."
+    />
+    <meta property="og:image" content="https://cogdex-ai.github.io/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:image:alt" content="Cogdex answering 'When does Maya's passport expire?' from a local file" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://cogdex-ai.github.io/og.png" />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="Cogdex home">
+        <span class="brand-mark">C</span>
+        <span class="brand-name">Cogdex</span>
+      </a>
+      <a class="btn btn-small" data-signup href="#beta">Join the beta</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> Private beta for Mac</p>
+          <h1>Your family's records.<br />Answered instantly.<br /><span class="accent">Never uploaded.</span></h1>
+          <p class="lede">
+            Cogdex is a private assistant for the documents you can never find when you need them:
+            passports, insurance cards, medical records, tax forms. Ask in plain English and get the
+            answer from your own files. Everything runs on your Mac.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" data-signup href="#beta">Join the beta</a>
+            <a class="btn btn-ghost" href="#how">How it works</a>
+          </div>
+          <p class="fineprint">Free during the beta · Mac with 16 GB of memory</p>
+        </div>
+
+        <div class="demo" aria-label="Example conversation with Cogdex">
+          <div class="demo-bar">
+            <span></span><span></span><span></span>
+            <p>Cogdex</p>
+            <em class="local"><span class="dot"></span> On this Mac</em>
+          </div>
+          <div class="demo-body">
+            <div class="msg user">When does Maya's passport expire?</div>
+            <div class="msg bot">
+              Maya's passport expires on <strong>March 14, 2027</strong>, about 5 months from now.
+              <span class="source">Passport_Maya.pdf</span>
+            </div>
+            <div class="msg user">What's our car insurance deductible?</div>
+            <div class="msg bot">
+              I couldn't find that in your files. Add your auto policy and I'll know next time.
+            </div>
+          </div>
+          <div class="demo-input">Ask about your files…</div>
+        </div>
+      </section>
+
+      <section class="features" aria-label="What Cogdex does">
+        <article>
+          <h3>Nothing leaves your Mac</h3>
+          <p>
+            Your documents, questions and answers stay on your computer. No account, no cloud, no
+            uploads. After setup, it works without the internet.
+          </p>
+        </article>
+        <article>
+          <h3>Reads scans and photos</h3>
+          <p>
+            Snap a picture of an ID card or drop in a scanned PDF. Cogdex reads the text, including
+            the machine-readable lines on passports.
+          </p>
+        </article>
+        <article>
+          <h3>Understands dates</h3>
+          <p>
+            Ask when something expires, how old someone is, or what's coming up. Cogdex does the date
+            math for you, so you don't have to.
+          </p>
+        </article>
+        <article>
+          <h3>Says “I don't know”</h3>
+          <p>
+            If the answer isn't in your files, Cogdex tells you instead of guessing. When it does
+            answer, it shows which file the answer came from.
+          </p>
+        </article>
+      </section>
+
+      <section class="how" id="how">
+        <h2>How it works</h2>
+        <ol>
+          <li>
+            <span class="step">1</span>
+            <h3>Install Cogdex</h3>
+            <p>One app. On first launch it sets itself up, a one-time download of a few gigabytes.</p>
+          </li>
+          <li>
+            <span class="step">2</span>
+            <h3>Add your files</h3>
+            <p>Drop documents, PDFs and photos into your Cogdex folder. Cogdex reads them automatically.</p>
+          </li>
+          <li>
+            <span class="step">3</span>
+            <h3>Ask anything</h3>
+            <p>“Which of our passports expire this year?” “What's my blood type?” Answers in seconds.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="beta" id="beta">
+        <h2>Join the private beta</h2>
+        <p>
+          I'm inviting a small group of early testers. You'll get the Mac app before anyone else and a
+          direct line to me for feedback.
+        </p>
+        <a class="btn" data-signup data-signup-primary href="#beta">Request an invite</a>
+        <p class="signup-pending" hidden>Invites open very soon. Check back in a few days.</p>
+        <ul class="requirements">
+          <li>macOS, Apple silicon recommended</li>
+          <li>16 GB of memory</li>
+          <li>About 5 GB of free space</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Cogdex</p>
+      <p>This website has no trackers, cookies or analytics.</p>
+    </footer>
+
+    <script>
+      // Paste your beta signup form link here (for example a Tally form).
+      const SIGNUP_URL = "";
+
+      if (SIGNUP_URL) {
+        document.querySelectorAll("[data-signup]").forEach((link) => {
+          link.href = SIGNUP_URL;
+          link.target = "_blank";
+          link.rel = "noopener";
+        });
+      } else {
+        document.querySelector("[data-signup-primary]").hidden = true;
+        document.querySelector(".signup-pending").hidden = false;
+      }
+    </script>
+  </body>
+</html>
