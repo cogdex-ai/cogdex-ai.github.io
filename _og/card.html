@@ -20,8 +20,11 @@
       }
       .brand { display: flex; align-items: center; gap: 14px; font-size: 30px; font-weight: 700; }
       .mark { width: 64px; height: 64px; }
-      h1 { margin: 36px 0 22px; font-size: 58px; line-height: 1.08; letter-spacing: -0.025em; font-weight: 750; }
-      .accent { color: #4edea3; }
+      h1 { margin: 36px 0 22px; font-size: 72px; line-height: 1.0; letter-spacing: -0.04em; font-weight: 760; }
+      .accent {
+        background: linear-gradient(100deg, #4edea3 10%, #9df5d0 45%, #5cc8ff 90%);
+        -webkit-background-clip: text; background-clip: text; color: transparent;
+      }
       p { margin: 0; color: #a9acad; font-size: 25px; line-height: 1.4; }
       .pill {
         display: inline-flex; align-items: center; gap: 10px; margin-top: 30px; padding: 10px 18px;
@@ -49,8 +52,8 @@
   <body>
     <div>
       <div class="brand"><img class="mark" src="../assets/cogdex-mark.png" alt="" />Cogdex</div>
-      <h1>Your family's records.<br /><span class="accent">Never uploaded.</span></h1>
-      <p>A private assistant for passports, insurance, medical and tax records. Runs entirely on your Mac.</p>
+      <h1>Index your mind.<br /><span class="accent">Offline.</span></h1>
+      <p>A private AI assistant for passports, insurance, medical and tax records. Runs entirely on your Mac.</p>
       <span class="pill"><span class="dot"></span>Private beta for Mac</span>
     </div>
     <div class="win">
@@ -58,7 +61,7 @@
       <div class="body">
         <div class="msg user">When does Maya's passport expire?</div>
         <div class="msg bot">
-          Maya's passport expires on <strong>March 14, 2027</strong>, about 5 months from now.
+          Maya's passport expires on <strong>14 March 2027</strong>, about 5 months from now.
           <span class="src">↳ Passport_Maya.pdf</span>
         </div>
       </div>

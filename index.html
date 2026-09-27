@@ -3,138 +3,454 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cogdex: your family's records, answered privately on your Mac</title>
+    <title>Cogdex: Index your mind. Offline.</title>
     <meta
       name="description"
-      content="Ask about passports, insurance, medical and tax records in plain English. Cogdex answers from your own files and runs entirely on your Mac. Nothing is uploaded."
+      content="Cogdex is a private AI assistant for your personal records. Ask about passports, insurance, medical and tax documents in plain English. It runs entirely on your Mac, and nothing is uploaded."
     />
     <link rel="canonical" href="https://cogdex-ai.github.io/" />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-    <meta name="theme-color" content="#131313" />
+    <meta name="theme-color" content="#0c0c0d" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Cogdex" />
     <meta property="og:url" content="https://cogdex-ai.github.io/" />
-    <meta property="og:title" content="Cogdex: your family's records, answered privately" />
+    <meta property="og:title" content="Cogdex: Index your mind. Offline." />
     <meta
       property="og:description"
-      content="A private assistant for passports, insurance, medical and tax records. Runs entirely on your Mac. Nothing is uploaded. Join the beta."
+      content="A private AI assistant for your personal records. Runs entirely on your Mac. Nothing is uploaded. Join the beta."
     />
     <meta property="og:image" content="https://cogdex-ai.github.io/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="627" />
-    <meta property="og:image:alt" content="Cogdex answering 'When does Maya's passport expire?' from a local file" />
+    <meta property="og:image:alt" content="Cogdex: Index your mind. Offline." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://cogdex-ai.github.io/og.png" />
 
     <link rel="stylesheet" href="./styles.css" />
+    <script>document.documentElement.classList.add("js");</script>
+    <script defer src="./main.js"></script>
   </head>
   <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" /></symbol>
+        <symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M8 12h8" /></symbol>
+        <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M16 3v4M8 3v4M3 10h18" /></symbol>
+        <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" /><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" /></symbol>
+        <symbol id="i-table" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 10h18M3 15h18M9 4v16" /></symbol>
+        <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01" /></symbol>
+        <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" /><path d="M14 3v5h5M9 13h6M9 17h4" /></symbol>
+        <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z" /><path d="M19 17l.7 1.8 1.8.7-1.8.7L19 22l-.7-1.8-1.8-.7 1.8-.7z" /></symbol>
+        <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z" /></symbol>
+        <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3" /><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5" /><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" /></symbol>
+        <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" /></symbol>
+        <symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M2 2l20 20M8.5 16.5a5 5 0 0 1 7 0M5 12.9a10 10 0 0 1 5.2-2.8M19 12.9a10 10 0 0 0-2.4-1.7M2 8.8a15 15 0 0 1 4.2-2.6M22 8.8A15 15 0 0 0 11 5M12 20h.01" /></symbol>
+        <symbol id="i-user-off" viewBox="0 0 24 24"><circle cx="10" cy="8" r="4" /><path d="M3 21a7 7 0 0 1 11-5.7M16 16l5 5M21 16l-5 5" /></symbol>
+        <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M3 3l18 18M10.6 5.1A10 10 0 0 1 12 5c6 0 10 7 10 7a17 17 0 0 1-3.2 3.9M6.6 6.6A17 17 0 0 0 2 12s4 7 10 7a9.7 9.7 0 0 0 5.4-1.6M9.9 9.9a3 3 0 0 0 4.2 4.2" /></symbol>
+        <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" /><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4z" /></symbol>
+        <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></symbol>
+        <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" /></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+        <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z" /></symbol>
+      </defs>
+    </svg>
+
     <header class="nav">
-      <a class="brand" href="#top" aria-label="Cogdex home">
-        <img class="brand-mark" src="./assets/cogdex-mark.png" alt="" />
-        <span class="brand-name">Cogdex</span>
-      </a>
-      <a class="btn btn-small" data-signup href="#beta">Join the beta</a>
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Cogdex home">
+          <img class="brand-mark" src="./assets/cogdex-mark.png" alt="" />
+          <span>Cogdex</span>
+        </a>
+        <nav class="nav-links" aria-label="Sections">
+          <a href="#memory">How it remembers</a>
+          <a href="#private">Privacy</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="btn btn-small" data-signup href="#beta">Join the beta</a>
+      </div>
     </header>
 
     <main id="top">
+      <!-- ============ HERO ============ -->
       <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="dot"></span> Private beta for Mac</p>
-          <h1>Your family's records.<br />Answered instantly.<br /><span class="accent">Never uploaded.</span></h1>
-          <p class="lede">
-            Cogdex is a private assistant for the documents you can never find when you need them:
-            passports, insurance cards, medical records, tax forms. Ask in plain English and get the
-            answer from your own files. Everything runs on your Mac.
-          </p>
-          <div class="hero-actions">
-            <a class="btn" data-signup href="#beta">Join the beta</a>
-            <a class="btn btn-ghost" href="#how">How it works</a>
-          </div>
-          <p class="fineprint">Free during the beta · Mac with 16 GB of memory</p>
-        </div>
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
 
-        <div class="demo" aria-label="Example conversation with Cogdex">
-          <div class="demo-bar">
-            <span></span><span></span><span></span>
-            <p>Cogdex</p>
-            <em class="local"><span class="dot"></span> On this Mac</em>
+        <p class="eyebrow reveal"><span class="dot"></span> Private beta for Mac</p>
+        <h1 class="reveal">Index your mind.<br /><span class="gradient">Offline.</span></h1>
+        <p class="lede reveal">
+          A private AI assistant for the records you can never find when you need them: passports,
+          insurance cards, medical and tax papers. Ask in plain English and get the answer from your
+          own files. <strong>Everything runs on your Mac.</strong>
+        </p>
+        <div class="hero-actions reveal">
+          <a class="btn" data-signup href="#beta">Join the beta <svg class="i"><use href="#i-arrow" /></svg></a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+        <ul class="hero-proof reveal" aria-label="Privacy promises">
+          <li><svg class="i"><use href="#i-wifi-off" /></svg> Works with Wi-Fi off</li>
+          <li><svg class="i"><use href="#i-user-off" /></svg> No account</li>
+          <li><svg class="i"><use href="#i-eye-off" /></svg> Nothing uploaded</li>
+        </ul>
+
+        <!-- App mockup -->
+        <div class="app reveal" aria-label="Example conversation with Cogdex">
+          <div class="app-bar">
+            <span class="lights"><i></i><i></i><i></i></span>
+            <span class="app-title">Cogdex</span>
           </div>
-          <div class="demo-body">
-            <div class="msg user">When does Maya's passport expire?</div>
-            <div class="msg bot">
-              Maya's passport expires on <strong>March 14, 2027</strong>, about 5 months from now.
-              <span class="source">Passport_Maya.pdf</span>
-            </div>
-            <div class="msg user">What's our car insurance deductible?</div>
-            <div class="msg bot">
-              I couldn't find that in your files. Add your auto policy and I'll know next time.
+          <div class="app-main">
+            <aside class="app-side" aria-hidden="true">
+              <img src="./assets/cogdex-mark.png" alt="" class="side-mark" />
+              <span class="side-item active"><svg class="i"><use href="#i-chat" /></svg> Chat</span>
+              <span class="side-item"><svg class="i"><use href="#i-db" /></svg> Memory &amp; Index</span>
+              <span class="side-item"><svg class="i"><use href="#i-gear" /></svg> Setup</span>
+              <span class="side-foot"><span class="dot"></span> Private engine ready</span>
+            </aside>
+            <div class="app-chat">
+              <div class="app-top" aria-hidden="true">
+                <span class="status"><span class="dot"></span> 128 documents indexed</span>
+                <span class="bell"><svg class="i"><use href="#i-bell" /></svg><b>1</b></span>
+              </div>
+              <div class="chat" id="chat" aria-live="off">
+                <div class="msg user">When does Maya's passport expire?</div>
+                <div class="msg bot">
+                  Maya's passport expires on <strong>14 March 2027</strong>, about 5 months from now.
+                  <span class="source"><svg class="i"><use href="#i-file" /></svg> Passport_Maya.pdf</span>
+                </div>
+                <div class="msg user">Which of our documents expire in the next year?</div>
+                <div class="msg bot">
+                  Three documents expire in the next 12 months:
+                  <table>
+                    <thead><tr><th>Document</th><th>Expires</th><th>Time left</th></tr></thead>
+                    <tbody>
+                      <tr><td>Maya's passport</td><td>14 Mar 2027</td><td><span class="tag warn">5 months</span></td></tr>
+                      <tr><td>Leo's driver's licence</td><td>2 Jun 2027</td><td><span class="tag">8 months</span></td></tr>
+                      <tr><td>Home insurance</td><td>1 Aug 2027</td><td><span class="tag">10 months</span></td></tr>
+                    </tbody>
+                  </table>
+                  <span class="source"><svg class="i"><use href="#i-file" /></svg> 3 files</span>
+                </div>
+              </div>
+              <div class="composer" aria-hidden="true">
+                <span id="composer-text">Ask about your files…</span>
+                <span class="send"><svg class="i"><use href="#i-send" /></svg></span>
+              </div>
             </div>
           </div>
-          <div class="demo-input">Ask about your files…</div>
         </div>
       </section>
 
-      <section class="features" aria-label="What Cogdex does">
-        <article>
-          <h3>Nothing leaves your Mac</h3>
-          <p>
-            Your documents, questions and answers stay on your computer. No account, no cloud, no
-            uploads. After setup, it works without the internet.
-          </p>
-        </article>
-        <article>
-          <h3>Reads scans and photos</h3>
-          <p>
-            Snap a picture of an ID card or drop in a scanned PDF. Cogdex reads the text, including
-            the machine-readable lines on passports.
-          </p>
-        </article>
-        <article>
-          <h3>Understands dates</h3>
-          <p>
-            Ask when something expires, how old someone is, or what's coming up. Cogdex does the date
-            math for you, so you don't have to.
-          </p>
-        </article>
-        <article>
-          <h3>Says “I don't know”</h3>
-          <p>
-            If the answer isn't in your files, Cogdex tells you instead of guessing. When it does
-            answer, it shows which file the answer came from.
-          </p>
-        </article>
+      <!-- Scenes the hero mockup plays through (see main.js). -->
+      <template id="scenes">
+        <div data-q="When does Maya's passport expire?">
+          Maya's passport expires on <strong>14 March 2027</strong>, about 5 months from now.
+          <span class="source"><svg class="i"><use href="#i-file" /></svg> Passport_Maya.pdf</span>
+        </div>
+        <div data-q="What's my insurance member ID?">
+          Which insurance do you mean? I found two:
+          <span class="choices"><span>Health insurance</span><span>Car insurance</span></span>
+        </div>
+        <div data-q="Health">
+          Your health insurance member ID is <strong>XKW 4418 2093</strong>.
+          <span class="source"><svg class="i"><use href="#i-file" /></svg> Health_Insurance_Card.jpg</span>
+        </div>
+        <div data-q="Which of our documents expire in the next year?">
+          Three documents expire in the next 12 months:
+          <table>
+            <thead><tr><th>Document</th><th>Expires</th><th>Time left</th></tr></thead>
+            <tbody>
+              <tr><td>Maya's passport</td><td>14 Mar 2027</td><td><span class="tag warn">5 months</span></td></tr>
+              <tr><td>Leo's driver's licence</td><td>2 Jun 2027</td><td><span class="tag">8 months</span></td></tr>
+              <tr><td>Home insurance</td><td>1 Aug 2027</td><td><span class="tag">10 months</span></td></tr>
+            </tbody>
+          </table>
+          <span class="source"><svg class="i"><use href="#i-file" /></svg> 3 files</span>
+        </div>
+        <div data-q="What's my blood type?">
+          Your blood type is <strong>O positive</strong>.
+          <span class="source fact"><svg class="i"><use href="#i-spark" /></svg> Something you told me</span>
+        </div>
+        <div data-q="What's our car insurance deductible?">
+          I couldn't find that in your files. Add your car policy and I'll know next time.
+        </div>
+      </template>
+
+      <!-- ============ QUESTIONS MARQUEE ============ -->
+      <section class="marquee" aria-label="Questions people ask Cogdex">
+        <div class="marquee-track">
+          <span>When does Leo's visa expire?</span>
+          <span>What's our Wi-Fi password?</span>
+          <span>How old is Maya?</span>
+          <span>What's my passport number?</span>
+          <span>When did we last travel to India?</span>
+          <span>What was our property tax last year?</span>
+          <span>Who is our family doctor?</span>
+          <span>What's my health insurance group number?</span>
+          <span>When does Leo's visa expire?</span>
+          <span>What's our Wi-Fi password?</span>
+          <span>How old is Maya?</span>
+          <span>What's my passport number?</span>
+          <span>When did we last travel to India?</span>
+          <span>What was our property tax last year?</span>
+          <span>Who is our family doctor?</span>
+          <span>What's my health insurance group number?</span>
+        </div>
       </section>
 
-      <section class="how" id="how">
-        <h2>How it works</h2>
-        <ol>
-          <li>
+      <!-- ============ FEATURES ============ -->
+      <section class="section" id="features">
+        <div class="section-head reveal">
+          <p class="kicker">What it does</p>
+          <h2>Answers from your own files.<br />Not from the internet.</h2>
+        </div>
+        <div class="bento">
+          <article class="card reveal">
+            <span class="card-icon"><svg class="i"><use href="#i-scan" /></svg></span>
+            <h3>Reads scans and photos</h3>
+            <p>
+              Snap a picture of an ID card or drop in a scanned PDF. Cogdex reads the text, including
+              the machine-readable lines at the bottom of a passport.
+            </p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><svg class="i"><use href="#i-calendar" /></svg></span>
+            <h3>Does the date math</h3>
+            <p>
+              Ask when something expires, how old someone is, or when you last travelled. Dates are
+              worked out exactly, not guessed.
+            </p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><svg class="i"><use href="#i-table" /></svg></span>
+            <h3>Clear, tidy answers</h3>
+            <p>
+              A single fact comes back as one sentence. Lists, like trips or renewals, come back as a
+              neat table you can scan at a glance.
+            </p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><svg class="i"><use href="#i-help" /></svg></span>
+            <h3>Asks when it's unsure</h3>
+            <p>
+              "Insurance number" could mean health or car. Cogdex asks which one you mean instead of
+              picking the wrong card.
+            </p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><svg class="i"><use href="#i-file" /></svg></span>
+            <h3>Shows its source</h3>
+            <p>
+              Every answer names the file it came from, so you can check it. If the answer isn't in
+              your files, it says so rather than making one up.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ DUAL MEMORY ============ -->
+      <section class="section" id="memory">
+        <div class="section-head reveal">
+          <p class="kicker">How it remembers</p>
+          <h2>Two kinds of memory, like yours.</h2>
+          <p class="section-lede">
+            You remember some things by looking them up, and others because someone told you. Cogdex
+            works the same way.
+          </p>
+        </div>
+        <div class="memory">
+          <article class="memory-card reveal">
+            <div class="memory-visual docs" aria-hidden="true">
+              <span class="doc d1"><svg class="i"><use href="#i-file" /></svg> Passport_Maya.pdf</span>
+              <span class="doc d2"><svg class="i"><use href="#i-file" /></svg> 2025_Tax_Return.pdf</span>
+              <span class="doc d3"><svg class="i"><use href="#i-file" /></svg> Insurance_Card.jpg</span>
+            </div>
+            <p class="memory-tag">Document memory</p>
+            <h3>Everything you've filed</h3>
+            <p>
+              Drop documents, PDFs and photos into your Cogdex folder. Cogdex reads every page and,
+              when you ask a question, finds the passage that answers it, even if you use different
+              words than the document does.
+            </p>
+            <p class="tech">Semantic search over on-device embeddings</p>
+          </article>
+          <article class="memory-card reveal">
+            <div class="memory-visual facts" aria-hidden="true">
+              <span class="fact-line"><svg class="i"><use href="#i-spark" /></svg> My blood type is O positive</span>
+              <span class="fact-line"><svg class="i"><use href="#i-spark" /></svg> Our family doctor is Dr. Patel</span>
+              <span class="fact-line"><svg class="i"><use href="#i-spark" /></svg> The Wi-Fi password is on the router</span>
+            </div>
+            <p class="memory-tag">Fact memory</p>
+            <h3>Things you tell it</h3>
+            <p>
+              Some things aren't written down anywhere. Tell Cogdex once, like your blood type or your
+              doctor's name, and it remembers exactly what you said.
+            </p>
+            <p class="tech">Episodic facts with exact recall</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ ALERTS ============ -->
+      <section class="section alerts">
+        <div class="alerts-copy reveal">
+          <p class="kicker">Expiry alerts</p>
+          <h2>Never miss a renewal again.</h2>
+          <p class="section-lede">
+            Cogdex spots the expiry dates in your passports, visas and licences and reminds you well
+            ahead of time: six months, three months, one month and one week before each date.
+          </p>
+          <ul class="checks">
+            <li>Found automatically. There's nothing to set up.</li>
+            <li>One reminder per milestone, never a flood.</li>
+            <li>Everything at a glance behind the bell icon.</li>
+          </ul>
+        </div>
+        <div class="alerts-visual reveal" aria-hidden="true">
+          <div class="notif">
+            <img src="./assets/cogdex-mark.png" alt="" />
+            <div>
+              <p class="notif-app">Cogdex <span>now</span></p>
+              <p class="notif-title">Passport expires in 3 months</p>
+              <p class="notif-body">Maya Passport expires on 14 Mar 2027.</p>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-head">
+              <p>Expiry alerts</p>
+              <span>Dates read from your indexed documents</span>
+            </div>
+            <div class="panel-row"><div><p>Maya Passport</p><span>Passport · 14 Mar 2027</span></div><b class="tag warn">In 5 months</b></div>
+            <div class="panel-row"><div><p>Leo Drivers Licence</p><span>Driver's licence · 2 Jun 2027</span></div><b class="tag">In 8 months</b></div>
+            <div class="panel-row"><div><p>Leo H1B Visa</p><span>Visa · 21 Sep 2028</span></div><b class="tag">In 2 years</b></div>
+            <div class="panel-row"><div><p>Sam Passport</p><span>Passport · 3 Dec 2030</span></div><b class="tag">In 4 years</b></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PRIVACY ============ -->
+      <section class="section" id="private">
+        <div class="private reveal">
+          <div class="private-copy">
+            <p class="kicker">Private by design</p>
+            <h2>Offline means offline.</h2>
+            <p class="section-lede">
+              Most AI assistants send your questions to a data centre. Cogdex can't: the AI model,
+              the search index and your documents all live on your Mac. After a one-time setup
+              download, you can turn the Wi-Fi off and it keeps working.
+            </p>
+          </div>
+          <div class="stats">
+            <div><b>0</b><span>files uploaded</span></div>
+            <div><b>0</b><span>accounts to create</span></div>
+            <div><b>0</b><span>cloud AI calls</span></div>
+            <div><b>0</b><span>trackers on this site</span></div>
+          </div>
+        </div>
+
+        <div class="tech-grid">
+          <article class="reveal">
+            <svg class="i"><use href="#i-cpu" /></svg>
+            <h3>A local AI model</h3>
+            <p>An open Llama model runs on your Mac's own chip. No API keys and no cloud calls.</p>
+          </article>
+          <article class="reveal">
+            <svg class="i"><use href="#i-db" /></svg>
+            <h3>An index on your disk</h3>
+            <p>Documents are split into passages and embedded into a SQLite file in your Library folder.</p>
+          </article>
+          <article class="reveal">
+            <svg class="i"><use href="#i-search" /></svg>
+            <h3>Hybrid search</h3>
+            <p>Meaning-based and keyword search are blended, so exact numbers and loose wording both land.</p>
+          </article>
+          <article class="reveal">
+            <svg class="i"><use href="#i-trash" /></svg>
+            <h3>Yours to delete</h3>
+            <p>Clear the index or a single chat any time. Deleting the app's folder removes everything.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ HOW ============ -->
+      <section class="section" id="how">
+        <div class="section-head reveal">
+          <p class="kicker">Get started</p>
+          <h2>Three steps, then just ask.</h2>
+        </div>
+        <ol class="steps">
+          <li class="reveal">
             <span class="step">1</span>
             <h3>Install Cogdex</h3>
-            <p>One app. On first launch it sets itself up, a one-time download of a few gigabytes.</p>
+            <p>One app. On first launch it sets itself up with a one-time download of a few gigabytes.</p>
           </li>
-          <li>
+          <li class="reveal">
             <span class="step">2</span>
             <h3>Add your files</h3>
-            <p>Drop documents, PDFs and photos into your Cogdex folder. Cogdex reads them automatically.</p>
+            <p>Drop documents, PDFs and photos into your Cogdex folder. It reads them automatically.</p>
           </li>
-          <li>
+          <li class="reveal">
             <span class="step">3</span>
             <h3>Ask anything</h3>
-            <p>“Which of our passports expire this year?” “What's my blood type?” Answers in seconds.</p>
+            <p>"Which of our passports expire this year?" "What's my blood type?" Answers in seconds.</p>
           </li>
         </ol>
       </section>
 
-      <section class="beta" id="beta">
+      <!-- ============ FAQ ============ -->
+      <section class="section faq" id="faq">
+        <div class="section-head reveal">
+          <p class="kicker">Questions</p>
+          <h2>Good to know.</h2>
+        </div>
+        <div class="faq-list reveal">
+          <details>
+            <summary>Does it need the internet?</summary>
+            <p>
+              Only once, to download the AI model during setup. After that Cogdex works completely
+              offline, and your questions and documents never leave your Mac.
+            </p>
+          </details>
+          <details>
+            <summary>Which Macs does it run on?</summary>
+            <p>
+              macOS with 16 GB of memory and about 5 GB of free space. Apple silicon (M1 or newer) is
+              recommended for fast answers.
+            </p>
+          </details>
+          <details>
+            <summary>Can it get things wrong?</summary>
+            <p>
+              It can, as any AI can. That's why every answer shows the file it came from, dates are
+              calculated exactly rather than guessed, and Cogdex says "I don't know" when the answer
+              isn't in your files.
+            </p>
+          </details>
+          <details>
+            <summary>Where are my documents stored?</summary>
+            <p>
+              Your files stay in your Cogdex folder. The index Cogdex builds from them is a single file
+              on your Mac. Nothing is copied to a server, because there is no server.
+            </p>
+          </details>
+          <details>
+            <summary>What does it cost?</summary>
+            <p>Cogdex is free during the beta.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- ============ BETA ============ -->
+      <section class="beta reveal" id="beta">
+        <div class="beta-glow" aria-hidden="true"></div>
+        <img class="beta-mark" src="./assets/cogdex-mark.png" alt="" />
         <h2>Join the private beta</h2>
         <p>
           I'm inviting a small group of early testers. You'll get the Mac app before anyone else and a
           direct line to me for feedback.
         </p>
-        <a class="btn" data-signup data-signup-primary href="#beta">Request an invite</a>
+        <a class="btn" data-signup data-signup-primary href="#beta">Request an invite <svg class="i"><use href="#i-arrow" /></svg></a>
         <p class="signup-pending" hidden>Invites open very soon. Check back in a few days.</p>
         <ul class="requirements">
           <li>macOS, Apple silicon recommended</li>
@@ -145,24 +461,14 @@
     </main>
 
     <footer class="footer">
-      <p>© 2026 Cogdex</p>
-      <p>This website has no trackers, cookies or analytics.</p>
+      <div class="footer-inner">
+        <a class="brand" href="#top">
+          <img class="brand-mark" src="./assets/cogdex-mark.png" alt="" />
+          <span>Cogdex</span>
+        </a>
+        <p>Index your mind. Offline.</p>
+        <p class="muted">© 2026 Cogdex · This website has no trackers, cookies or analytics.</p>
+      </div>
     </footer>
-
-    <script>
-      // Paste your beta signup form link here (for example a Tally form).
-      const SIGNUP_URL = "";
-
-      if (SIGNUP_URL) {
-        document.querySelectorAll("[data-signup]").forEach((link) => {
-          link.href = SIGNUP_URL;
-          link.target = "_blank";
-          link.rel = "noopener";
-        });
-      } else {
-        document.querySelector("[data-signup-primary]").hidden = true;
-        document.querySelector(".signup-pending").hidden = false;
-      }
-    </script>
   </body>
 </html>
