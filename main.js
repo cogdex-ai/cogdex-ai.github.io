@@ -1,5 +1,5 @@
 // Paste your beta signup form link here (for example a Tally form).
-const SIGNUP_URL = "";
+const SIGNUP_URL = "https://tally.so/r/Zj0MXe";
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
