@@ -1,6 +1,6 @@
 # cogdex-ai.github.io
 
-Website for Cogdex, served at https://cogdex-ai.github.io by GitHub Pages.
+Website for Cogdex, served at https://cogdex.app by GitHub Pages.
 
 Plain HTML and CSS, no build step. Pushing to `main` publishes the site.
 
