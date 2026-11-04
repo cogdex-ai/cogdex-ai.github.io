@@ -47,6 +47,10 @@
                 >Download Cogdex.dmg</a
               >
             </p>
+            <p style="margin-top: 12px; font-size: 14px">
+              By downloading you agree to the <a href="./terms.html" style="text-decoration: underline">Terms of Use</a>.
+              Cogdex asks you to accept them again the first time it opens.
+            </p>
           </li>
           <li>
             <span class="step">2</span>
@@ -95,7 +99,7 @@
         </p>
       </section>
 
-      <section class="section" style="padding-bottom: 96px">
+      <section class="section">
         <div class="section-head">
           <p class="kicker">Then</p>
           <h2>Stay on Setup until it says Ready</h2>
@@ -104,6 +108,55 @@
             awake and online. When Setup says Ready, drop files into your Cogdex folder
             and ask a question.
           </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="kicker">Your data</p>
+          <h2>Where Cogdex keeps things</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Everything stays on your Mac. Cogdex keeps the text it reads from your documents,
+            your chats and what you ask it to remember in a database in your Library folder.
+          </p>
+          <p>
+            <strong>Cogdex does not encrypt that database itself.</strong> It is protected by your
+            Mac's login password and by FileVault, if it is on (System Settings → Privacy &amp;
+            Security → FileVault). Time Machine backs it up like any other file, so a backup disk
+            holds a copy too. Anyone who can sign in to your Mac account can read it.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="uninstall" style="padding-bottom: 96px">
+        <div class="section-head">
+          <p class="kicker">Uninstall</p>
+          <h2>Remove Cogdex completely</h2>
+        </div>
+        <div class="prose">
+          <ol>
+            <li>
+              In Cogdex, open <strong>Setup</strong>, choose <strong>Export memory</strong> if you
+              want a copy, then <strong>Delete all Cogdex data</strong>. This erases the index,
+              chats, saved memory and reminders. Your original files are not touched.
+            </li>
+            <li>Quit Cogdex and drag it from Applications to the Trash.</li>
+            <li>
+              To also remove the private engine and the AI models (about 2.5 GB), open Finder,
+              choose <strong>Go → Go to Folder</strong>, and move each of these to the Trash:
+              <ul>
+                <li><code>~/Library/Application Support/Cogdex</code></li>
+                <li><code>~/Library/Logs/Cogdex</code></li>
+                <li><code>~/Library/LaunchAgents/ai.cogdex.expiry.plist</code> (expiry reminders)</li>
+                <li><code>~/Library/Caches/com.cogdex.app</code></li>
+                <li><code>~/Library/WebKit/com.cogdex.app</code></li>
+                <li><code>~/Library/Preferences/com.cogdex.app.plist</code></li>
+              </ul>
+            </li>
+            <li>Empty the Trash. Your Cogdex folder of documents is yours to keep or delete.</li>
+          </ol>
         </div>
       </section>
     </main>
@@ -115,7 +168,7 @@
           <span>Cogdex</span>
         </a>
         <p>Index your mind. Offline.</p>
-        <p class="muted">© 2026 Cogdex · This website has no trackers, cookies or analytics.</p>
+        <p class="muted">© 2026 Cogdex · <a href="./terms.html">Terms</a> · This website has no trackers, cookies or analytics.</p>
       </div>
     </footer>
   </body>

@@ -368,7 +368,7 @@
           <article class="reveal">
             <svg class="i"><use href="#i-trash" /></svg>
             <h3>Yours to delete</h3>
-            <p>Clear the index or a single chat any time. Deleting the app's folder removes everything.</p>
+            <p>Delete a chat, a file or everything Cogdex knows from Setup, in one step. Export what it remembers first if you like.</p>
           </article>
         </div>
       </section>
@@ -415,23 +415,37 @@
           <details>
             <summary>Which Macs does it run on?</summary>
             <p>
-              macOS with 8 GB of memory and about 5 GB of free space. Apple silicon (M1 or newer) is
-              recommended for fast answers.
+              Macs with Apple silicon (M1 or newer) running macOS 12 or later, with 8 GB of memory and
+              about 5 GB of free space. Intel Macs are not supported.
             </p>
           </details>
           <details>
             <summary>Can it get things wrong?</summary>
             <p>
-              It can, as any AI can. That's why every answer shows the file it came from, dates are
-              calculated exactly rather than guessed, and Cogdex says "I don't know" when the answer
-              isn't in your files.
+              It can, as any AI can. That's why every answer shows the file it came from, ID numbers
+              are shown next to the line of the document they were read from, dates are calculated
+              exactly rather than guessed, and Cogdex says "I don't know" when the answer isn't in your
+              files. Check anything important against the original document.
             </p>
           </details>
           <details>
             <summary>Where are my documents stored?</summary>
             <p>
-              Your files stay in your Cogdex folder. The index Cogdex builds from them is a single file
-              on your Mac. Nothing is copied to a server, because there is no server.
+              Your files stay in your Cogdex folder. Cogdex keeps the text it reads from them, and what
+              you ask it to remember, in a database in your Library folder. Nothing is copied to a
+              server, because there is no server.
+            </p>
+            <p>
+              Cogdex does not encrypt that database itself. It is protected by your Mac's login and by
+              FileVault if you have it turned on, and Time Machine backs it up like any other file.
+            </p>
+          </details>
+          <details>
+            <summary>How do I remove it?</summary>
+            <p>
+              In Cogdex, go to Setup and choose Delete all Cogdex data. Then drag the app to the Trash.
+              To also remove the private engine and models, follow the
+              <a href="./install.html#uninstall">uninstall steps</a>.
             </p>
           </details>
           <details>
@@ -453,7 +467,7 @@
         <a class="btn" data-signup data-signup-primary href="#beta">Request an invite <svg class="i"><use href="#i-arrow" /></svg></a>
         <p class="signup-pending" hidden>Invites open very soon. Check back in a few days.</p>
         <ul class="requirements">
-          <li>macOS, Apple silicon recommended</li>
+          <li>Apple silicon Mac, macOS 12 or later</li>
           <li>8 GB of memory</li>
           <li>About 5 GB of free space</li>
         </ul>
@@ -467,7 +481,7 @@
           <span>Cogdex</span>
         </a>
         <p>Index your mind. Offline.</p>
-        <p class="muted">© 2026 Cogdex · This website has no trackers, cookies or analytics.</p>
+        <p class="muted">© 2026 Cogdex · <a href="./terms.html">Terms</a> · This website has no trackers, cookies or analytics.</p>
       </div>
     </footer>
   </body>
