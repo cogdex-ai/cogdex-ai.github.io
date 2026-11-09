@@ -116,21 +116,25 @@
               <div class="chat" id="chat" aria-live="off">
                 <div class="msg user">When does Maya's passport expire?</div>
                 <div class="msg bot">
-                  Maya's passport expires on <strong>14 March 2027</strong>, about 5 months from now.
+                  Maya's passport expires on <strong>14 March 2027</strong>, about 4 months from now.
                   <span class="source"><svg class="i"><use href="#i-file" /></svg> Passport_Maya.pdf</span>
                 </div>
-                <div class="msg user">Which of our documents expire in the next year?</div>
+                <div class="msg user">Which of our documents expire in the next 12 months?</div>
                 <div class="msg bot">
-                  Three documents expire in the next 12 months:
+                  Five documents expire in the next 12 months:
                   <table>
-                    <thead><tr><th>Document</th><th>Expires</th><th>Time left</th></tr></thead>
+                    <thead>
+                      <tr><th>Document</th><th>Type</th><th>Expires</th><th>Time left</th></tr>
+                    </thead>
                     <tbody>
-                      <tr><td>Maya's passport</td><td>14 Mar 2027</td><td><span class="tag warn">5 months</span></td></tr>
-                      <tr><td>Leo's driver's licence</td><td>2 Jun 2027</td><td><span class="tag">8 months</span></td></tr>
-                      <tr><td>Home insurance</td><td>1 Aug 2027</td><td><span class="tag">10 months</span></td></tr>
+                      <tr><td>Car Insurance Card</td><td>Insurance</td><td>15 Jan 2027</td><td><span class="tag warn">In 2 months</span></td></tr>
+                      <tr><td>Maya Passport</td><td>Passport</td><td>14 Mar 2027</td><td><span class="tag warn">In 4 months</span></td></tr>
+                      <tr><td>Vehicle Registration</td><td>Document</td><td>30 Apr 2027</td><td><span class="tag">In 6 months</span></td></tr>
+                      <tr><td>Leo Drivers Licence</td><td>Driver's licence</td><td>2 Jun 2027</td><td><span class="tag">In 7 months</span></td></tr>
+                      <tr><td>Home Insurance Declarations</td><td>Insurance</td><td>1 Aug 2027</td><td><span class="tag">In 9 months</span></td></tr>
                     </tbody>
                   </table>
-                  <span class="source"><svg class="i"><use href="#i-file" /></svg> 3 files</span>
+                  <span class="source"><svg class="i"><use href="#i-file" /></svg> 5 files</span>
                 </div>
               </div>
               <div class="composer" aria-hidden="true">
@@ -145,57 +149,87 @@
       <!-- Scenes the hero mockup plays through (see main.js). -->
       <template id="scenes">
         <div data-q="When does Maya's passport expire?">
-          Maya's passport expires on <strong>14 March 2027</strong>, about 5 months from now.
+          Maya's passport expires on <strong>14 March 2027</strong>, about 4 months from now.
           <span class="source"><svg class="i"><use href="#i-file" /></svg> Passport_Maya.pdf</span>
         </div>
-        <div data-q="What's my insurance member ID?">
-          Which insurance do you mean? I found two:
-          <span class="choices"><span>Health insurance</span><span>Car insurance</span></span>
-        </div>
-        <div data-q="Health">
-          Your health insurance member ID is <strong>XKW 4418 2093</strong>.
-          <span class="source"><svg class="i"><use href="#i-file" /></svg> Health_Insurance_Card.jpg</span>
-        </div>
-        <div data-q="Which of our documents expire in the next year?">
-          Three documents expire in the next 12 months:
+        <div data-q="Give me all the birthdays that you know">
+          Three dates of birth:
           <table>
-            <thead><tr><th>Document</th><th>Expires</th><th>Time left</th></tr></thead>
+            <thead><tr><th>Person</th><th>Date of birth</th></tr></thead>
             <tbody>
-              <tr><td>Maya's passport</td><td>14 Mar 2027</td><td><span class="tag warn">5 months</span></td></tr>
-              <tr><td>Leo's driver's licence</td><td>2 Jun 2027</td><td><span class="tag">8 months</span></td></tr>
-              <tr><td>Home insurance</td><td>1 Aug 2027</td><td><span class="tag">10 months</span></td></tr>
+              <tr><td>Ava Rivera</td><td>22 April 2019</td></tr>
+              <tr><td>Maya Rivera</td><td>2 May 1988</td></tr>
+              <tr><td>Sam Rivera</td><td>19 November 1986</td></tr>
             </tbody>
           </table>
           <span class="source"><svg class="i"><use href="#i-file" /></svg> 3 files</span>
         </div>
-        <div data-q="What's my blood type?">
-          Your blood type is <strong>O positive</strong>.
-          <span class="source fact"><svg class="i"><use href="#i-spark" /></svg> Something you told me</span>
+        <div data-q="When did Maya and Sam get married?">
+          Maya and Sam were married on <strong>14 June 2018</strong>.
+          <span class="source"><svg class="i"><use href="#i-file" /></svg> Marriage_Certificate.pdf</span>
         </div>
-        <div data-q="What's our car insurance deductible?">
-          I couldn't find that in your files. Add your car policy and I'll know next time.
+        <div data-q="What's Maya's passport number?">
+          Maya's passport number is <strong>A47291836</strong>.
+          <span class="source"><svg class="i"><use href="#i-file" /></svg> Passport_Maya.pdf</span>
+        </div>
+        <div data-q="How much is the gas bill?">
+          The gas bill is <strong>$60.99</strong>.
+          <span class="source"><svg class="i"><use href="#i-file" /></svg> Gas_Bill.pdf</span>
+        </div>
+        <div data-q="What was our 2025 tax refund?">
+          Your 2025 tax refund was <strong>$2,184</strong>.
+          <span class="source"><svg class="i"><use href="#i-file" /></svg> 2025_Tax_Return.pdf</span>
+        </div>
+        <div data-q="What's my health insurance member ID?">
+          Which insurance do you mean? I found two:
+          <span class="choices"><span>Health insurance</span><span>Car insurance</span></span>
+        </div>
+        <div data-q="Health">
+          Your health insurance member ID is <strong>NSH448812093</strong>.
+          <span class="source"><svg class="i"><use href="#i-file" /></svg> Health_Insurance_Card.jpg</span>
+        </div>
+        <div data-q="Which of our documents expire in the next 12 months?">
+          Five documents expire in the next 12 months:
+          <table>
+            <thead>
+              <tr><th>Document</th><th>Type</th><th>Expires</th><th>Time left</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Car Insurance Card</td><td>Insurance</td><td>15 Jan 2027</td><td><span class="tag warn">In 2 months</span></td></tr>
+              <tr><td>Maya Passport</td><td>Passport</td><td>14 Mar 2027</td><td><span class="tag warn">In 4 months</span></td></tr>
+              <tr><td>Vehicle Registration</td><td>Document</td><td>30 Apr 2027</td><td><span class="tag">In 6 months</span></td></tr>
+              <tr><td>Leo Drivers Licence</td><td>Driver's licence</td><td>2 Jun 2027</td><td><span class="tag">In 7 months</span></td></tr>
+              <tr><td>Home Insurance Declarations</td><td>Insurance</td><td>1 Aug 2027</td><td><span class="tag">In 9 months</span></td></tr>
+            </tbody>
+          </table>
+          <span class="source"><svg class="i"><use href="#i-file" /></svg> 5 files</span>
+        </div>
+        <div data-q="What's Maya's Social Security number?">
+          I couldn't find Maya's Social Security number in your files.
         </div>
       </template>
 
       <!-- ============ QUESTIONS MARQUEE ============ -->
       <section class="marquee" aria-label="Questions people ask Cogdex">
         <div class="marquee-track">
-          <span>When does Leo's visa expire?</span>
-          <span>What's our Wi-Fi password?</span>
-          <span>How old is Maya?</span>
-          <span>What's my passport number?</span>
-          <span>When did we last travel to India?</span>
+          <span>When does Maya's passport expire?</span>
+          <span>When did Maya and Sam get married?</span>
+          <span>How much is the gas bill?</span>
+          <span>What was our 2025 tax refund?</span>
+          <span>What's my health insurance member ID?</span>
           <span>What was our property tax last year?</span>
           <span>Who is our family doctor?</span>
-          <span>What's my health insurance group number?</span>
-          <span>When does Leo's visa expire?</span>
-          <span>What's our Wi-Fi password?</span>
-          <span>How old is Maya?</span>
-          <span>What's my passport number?</span>
-          <span>When did we last travel to India?</span>
+          <span>Which of our documents expire in the next 12 months?</span>
+          <span>Give me all the birthdays that you know</span>
+          <span>When does Maya's passport expire?</span>
+          <span>When did Maya and Sam get married?</span>
+          <span>How much is the gas bill?</span>
+          <span>What was our 2025 tax refund?</span>
+          <span>What's my health insurance member ID?</span>
           <span>What was our property tax last year?</span>
           <span>Who is our family doctor?</span>
-          <span>What's my health insurance group number?</span>
+          <span>Which of our documents expire in the next 12 months?</span>
+          <span>Give me all the birthdays that you know</span>
         </div>
       </section>
 
@@ -277,14 +311,13 @@
           </article>
           <article class="memory-card reveal">
             <div class="memory-visual facts" aria-hidden="true">
-              <span class="fact-line"><svg class="i"><use href="#i-spark" /></svg> My blood type is O positive</span>
               <span class="fact-line"><svg class="i"><use href="#i-spark" /></svg> Our family doctor is Dr. Patel</span>
               <span class="fact-line"><svg class="i"><use href="#i-spark" /></svg> The Wi-Fi password is on the router</span>
             </div>
             <p class="memory-tag">Fact memory</p>
             <h3>Things you tell it</h3>
             <p>
-              Some things aren't written down anywhere. Tell Cogdex once, like your blood type or your
+              Some things aren't written down anywhere. Tell Cogdex once, like your
               doctor's name, and it remembers exactly what you said.
             </p>
             <p class="tech">Episodic facts with exact recall</p>
@@ -394,7 +427,7 @@
           <li class="reveal">
             <span class="step">3</span>
             <h3>Ask anything</h3>
-            <p>"Which of our passports expire this year?" "What's my blood type?" Answers in seconds.</p>
+            <p>"When did Maya and Sam get married?" "How much is the gas bill?" Answers in seconds.</p>
           </li>
         </ol>
       </section>
